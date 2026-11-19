@@ -16,7 +16,16 @@
 - [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Navigation for [greenrobot EventBus](https://github.com/greenrobot/EventBus) in Java and Kotlin, for IntelliJ IDEA and Android Studio.
+
+- Click the gutter icon next to `EventBus.post()` / `postSticky()` to jump to the `@Subscribe` methods receiving the event.
+- Click the gutter icon next to a `@Subscribe` method to jump to the places posting its event.
+- Event inheritance is respected: a subscriber of a supertype also receives events of its subtypes.
+- The icons can be toggled in <kbd>Settings</kbd> > <kbd>Editor</kbd> > <kbd>General</kbd> > <kbd>Gutter Icons</kbd>.
+
+## Development
+
+The plugin is built, run (`runIde`) and tested against the locally installed Android Studio configured in [build.gradle.kts](./build.gradle.kts), using its bundled JBR as the Java toolchain (see [gradle.properties](./gradle.properties)). When that path does not exist (e.g. on CI), IntelliJ IDEA is downloaded instead.
 
 ## Installation
 
